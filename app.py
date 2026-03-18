@@ -214,14 +214,17 @@ if submitted and model is not None:
         """)
         # ✅ CHANGE 6: Removed Region bullet point from expander since it's no longer used
 
+
+# Footer
+st.markdown("---")
 # ─────────────────────────────────────────────
 # ✅ CHANGE 7: NEW — Quick Insight section at the very bottom
 # ─────────────────────────────────────────────
 st.markdown("---")
 st.markdown("### 💡 Quick Insight: Smoker vs Non-Smoker")
-
+ 
 insight_col1, insight_col2, insight_col3 = st.columns(3)
-
+ 
 with insight_col1:
     st.markdown("""
     <div class="insight-box">
@@ -230,7 +233,7 @@ with insight_col1:
         <p style="color:gray;">per year (dataset average)</p>
     </div>
     """, unsafe_allow_html=True)
-
+ 
 with insight_col2:
     st.markdown("""
     <div class="insight-box">
@@ -239,7 +242,7 @@ with insight_col2:
         <p style="color:gray;">per year (dataset average)</p>
     </div>
     """, unsafe_allow_html=True)
-
+ 
 with insight_col3:
     st.markdown("""
     <div class="insight-box">
@@ -248,9 +251,6 @@ with insight_col3:
         <p style="color:gray;">smokers pay ~3.8x more on average</p>
     </div>
     """, unsafe_allow_html=True)
-
-# Footer
-st.markdown("---")
 st.markdown(
     "<p style='text-align: center; color: gray;'>SmartPolicy | AI-Powered Insurance Prediction | v1.0</p>",
     unsafe_allow_html=True
