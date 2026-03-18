@@ -88,11 +88,6 @@ with st.form("prediction_form"):
 
     smoker = st.selectbox("Smoker", options=["yes", "no"])
 
-    region = st.selectbox(
-        "Region",
-        options=["northeast", "northwest", "southeast", "southwest"]
-    )
-
     submitted = st.form_submit_button("💰 Predict Premium", use_container_width=True)
 
 if submitted and model is not None:
@@ -103,7 +98,6 @@ if submitted and model is not None:
         'bmi': [bmi],
         'children': [children],
         'smoker': [1 if smoker == 'yes' else 0],
-        'region': [{'northeast': 0, 'northwest': 1, 'southeast': 2, 'southwest': 3}[region]],
         'bmi_risk': [bmi / age]
     })
 
